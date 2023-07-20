@@ -120,7 +120,7 @@ while True:
 
     elif cypher == "2":
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
-        print("Готово, начальник!")
+        print("Ребилд прошёл успешно!")
     elif cypher == "3":
         subprocess.call("xs clamav disable", shell=True)
         subprocess.call("rm -rf /var/db/clamav/*", shell=True)
