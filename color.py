@@ -81,9 +81,7 @@ def print_pepe_ascii_art_start():
     print(pepe_ascii2)
 
 txt = 'Готово, командир!'
-    for i in txt:
-        time.sleep(0.3)
-        print(i, end='', flush=True)
+
 green("run...")
 print_pepe_ascii_art_start()
 print("----------------------------------\nЗдравствуйте!\nВас приветствует диагностическая утилита ICSSUPP.\nЧем могу помочь?\n----------------------------------")
@@ -96,6 +94,9 @@ while True:
 
     if cypher == "0":
         subprocess.call("clear")
+        for i in txt:
+            time.sleep(0.3)
+            print(i, end='', flush=True)
         print("Бывай, начальник")
         print_pepe_ascii_art_end()
         break
