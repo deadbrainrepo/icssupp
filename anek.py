@@ -60,7 +60,7 @@ print("----------------------------------")
 while True:
     print("----------------------------------")
     print("1) Проверить состояние служб\n2) Сделать ребилд\n3) Починить ClamAV\n4) Проверить "
-          "стейты\n5) Продлить тестовый период\n6) Пошутить\n0) Послать на хуй")
+          "стейты\n5) Продлить тестовый период\n6) Пошутить\n7) Дать root'a\n0) Послать на хуй")
     print("----------------------------------")
     cypher = input()
 
@@ -78,6 +78,7 @@ while True:
         subprocess.call("rm -rf /var/db/clamav/*", shell=True)
         subprocess.call("freshclam", shell=True)
         subprocess.call("xs clamav enable", shell=True)
+        print("Готово, начальник!")
     elif cypher == "4":
         print("----------------------------------")
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
@@ -88,6 +89,10 @@ while True:
         print("----------------------------------")
         print(get_random_joke())
         print("----------------------------------")
+    elif cypher == "7":
+        subprocess.call("passwd root && echo R! >> /etc/motd.template")
+        subprocess.call("service motd restart")
+        print("Готово!")
     else:
         print("----------------------------------")
         print("Нет такой буквы")
