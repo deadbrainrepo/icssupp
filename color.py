@@ -81,7 +81,7 @@ def print_pepe_ascii_art_start():
     print(pepe_ascii2)
 
 bye = 'Бывай, начальник!\n'
-run = green('run...\n')
+run = 'run...\n'
 
 subprocess.call("clear")
 for i in run:
