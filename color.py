@@ -83,15 +83,15 @@ def print_pepe_ascii_art_start():
 bye = 'Бывай, начальник!\n'
 run = 'run...\n'
 hi = '----------------------------------\nЗдравствуйте!\nВас приветствует диагностическая утилита ICSSUPP.\nЧем могу помочь?\n----------------------------------'
+green(yap)
 subprocess.call("clear")
 for i in run:
     time.sleep(0.2)
     print(i, end='', flush=True)
 subprocess.call("clear")
 
-for i in print_pepe_ascii_art_start():
-    time.sleep(0.5)
-    print(i, end='', flush=True)
+print_pepe_ascii_art_start()
+
 subprocess.call("clear")
 
 for i in hi:
