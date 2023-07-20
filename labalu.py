@@ -3,7 +3,7 @@ cypher = (1)
 print("Здравствуйте!")
 print("Вас приветствует диагностическая утилита ICSSUPP.")
 print("Чем могу помочь?")
-while cypher == (1) or (2):
+while cypher != 0:
     print("1) Проверить состояние служб\n2) Послать нахуй\n")
     cypher = input()
 
