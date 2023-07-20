@@ -92,10 +92,7 @@ for i in run:
     print(i, end='', flush=True)
 subprocess.call("clear")
 
-for i in pepe_h:
-    time.sleep(0.01)
-    print(i, end='', flush=True)
-subprocess.call("clear")
+print(pepe_h)
 
 subprocess.call("clear")
 
