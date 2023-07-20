@@ -87,6 +87,10 @@ pepe_h = print_pepe_ascii_art_start
 pepe_q = pepe_h
 green("yap")
 subprocess.call("clear")
+for i in pepe_q:
+    time.sleep(0.2)
+    print(i, end='', flush=True)
+subprocess.call("clear")
 #print_pepe_ascii_art_start()
 for i in run:
     time.sleep(0.2)
