@@ -1,111 +1,36 @@
 import time
-import os
-from os import system, name
 
-# define our clear function
-def clear():
-    os.system( 'cls' )
+def print_ascii_animation():
+    frames = [
+        r"""
+      ___  
+    ('v')/ 
+    //-=-\\ 
+    (\_=_/) 
+   ^^ /^_\^^""",
+        r"""
+      ___  
+    ('v')/ 
+    //-=-\\ 
+    (\_=_/) 
+   ^^ /^_\^^""",
+        r"""
+      ___  
+    ('v')/ 
+    //-=-\\ 
+    (\_=_/) 
+   ^^ /^_\^^""",
+        r"""
+      ___  
+    ('v')/ 
+    //-=-\\ 
+    (\_=_/) 
+   ^^ /^_\^^""",
+    ]
 
-def welcome():
+    for frame in frames:
+        print("\033c", end="")
+        print(frame)
+        time.sleep(0.5)
 
-    smoke = ['               (_)','               ()', '                ()','               ()', '                ()']
-    print("\n"*4)
-    print("                _     ")
-    print("     __________| |____")
-    print("    /                 \\")
-    print("   /     Welcome to    \\")
-    print("  /     A Horror Game   \\")
-    print("  |    By: A.D & T.P    |")
-    print("  |     ____     ___    |")
-    print("  |    |    |   |___|   |")
-    print("__|____|____|___________|__")
-    print("")
-    time.sleep(.6)
-    clear()
-
-    print("\n"*5)
-    print (smoke[0])
-    print("     __________| |____")
-    print("    /                 \\")
-    print("   /     Welcome to    \\")
-    print("  /     A Horror Game   \\")
-    print("  |    By: A.D & T.P    |")
-    print("  |     ____     ___    |")
-    print("  |    |    |   |___|   |")
-    print("__|____|____|___________|__")
-    print("")
-    time.sleep(.6)
-    clear()
-
-    print("\n"*4)
-    print (smoke[1])
-    print (smoke[0])
-    print("     __________| |____")
-    print("    /                 \\")
-    print("   /     Welcome to    \\")
-    print("  /     A Horror Game   \\")
-    print("  |    By: A.D & T.P    |")
-    print("  |     ____     ___    |")
-    print("  |    |    |   |___|   |")
-    print("__|____|____|___________|__")
-    print("")
-    time.sleep(.6)
-    clear()
-
-    print("\n"*3)
-    print (smoke[2])
-    print (smoke[1])
-    print (smoke[0])
-    print("     __________| |____")
-    print("    /                 \\")
-    print("   /     Welcome to    \\")
-    print("  /     A Horror Game   \\")
-    print("  |    By: A.D & T.P    |")
-    print("  |     ____     ___    |")
-    print("  |    |    |   |___|   |")
-    print("__|____|____|___________|__")
-    print("")
-    time.sleep(.6)
-    clear()
-
-    print("\n"*2)
-    print (smoke[3])
-    print (smoke[2])
-    print (smoke[1])
-    print (smoke[0])
-    print("     __________| |____")
-    print("    /                 \\")
-    print("   /     Welcome to    \\")
-    print("  /     A Horror Game   \\")
-    print("  |    By: A.D & T.P    |")
-    print("  |     ____     ___    |")
-    print("  |    |    |   |___|   |")
-    print("__|____|____|___________|__")
-    print("")
-    time.sleep(.6)
-    clear()
-
-    print("\n"*1)
-    print (smoke[4])
-    print (smoke[3])
-    print (smoke[2])
-    print (smoke[1])
-    print (smoke[0])
-    print("     __________| |____")
-    print("    /                 \\")
-    print("   /     Welcome to    \\")
-    print("  /     A Horror Game   \\")
-    print("  |    By: A.D & T.P    |")
-    print("  |     ____     ___    |")
-    print("  |    |    |   |___|   |")
-    print("__|____|____|___________|__")
-    print("")
-    time.sleep(.6)
-    clear()
-
-
-
-
-while True:
-    welcome()
-    print('\033[2J')
+print_ascii_animation()
