@@ -88,12 +88,10 @@ hi = '----------------------------------\nЗдравствуйте!\nВас пр
 green("yap")
 subprocess.call("clear")
 print(pepe_ascii2)
-b = print_test()
-for i in b:
+for i in pepe_ascii2:
     time.sleep(0.2)
     print(i, end='', flush=True)
 subprocess.call("clear")
-print_pepe_ascii_art_start
 #subprocess.call("clear")
 #print_pepe_ascii_art_start()
 for i in run:
