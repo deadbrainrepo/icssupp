@@ -138,6 +138,7 @@ while True:
         print("----------------------------------")
     elif cypher == "5":
         subprocess.call("sh -c 'BASE_PARTITION=\"'$(zfs list -d 0 -H | cut -f 1 | grep zp)'\" && zfs set zfs:trial=839 $BASE_PARTITION@ok' && xs execworker restart && xs jojoba restart", shell=True)
+        subprocess.call("clear")
         print("Тестовый период успешно продлён.")
     elif cypher == "6":
         print("----------------------------------")
