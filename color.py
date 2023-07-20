@@ -80,7 +80,7 @@ def print_pepe_ascii_art_start():
 ⢱⡿⠶⠿⠶⠾⠶⠾⠶⠾⠷⠾⠶⠾⠷⠾⠶⠾⠷⠾⠷⠾⠷⠾⠷⠾⠟⠛⠻⠞⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢹"""
     print(pepe_ascii2)
 
-txt = 'Готово, командир!'
+bye = 'Бывай, начальник'
 
 green("run...")
 print_pepe_ascii_art_start()
@@ -94,10 +94,9 @@ while True:
 
     if cypher == "0":
         subprocess.call("clear")
-        for i in txt:
-            time.sleep(0.3)
+        for i in bye:
+            time.sleep(0.1)
             print(i, end='', flush=True)
-        print("Бывай, начальник")
         print_pepe_ascii_art_end()
         break
     elif cypher == "1":
