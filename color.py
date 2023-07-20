@@ -116,6 +116,7 @@ while True:
         print_pepe_ascii_art_end()
         break
     elif cypher == "1":
+        subprocess.call("clear")
         subprocess.call("/usr/local/ics/support/bin/status")
 
     elif cypher == "2":
