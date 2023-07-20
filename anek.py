@@ -75,6 +75,9 @@ while True:
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
     elif cypher == "3":
         subprocess.call("xs clamav disable", shell=True)
+            if input("ERROR: Can't open/parse the config file /usr/local/etc/freshclam.conf")
+            break
+            print("Ты его даже не настроил!")
         subprocess.call("rm -rf /var/db/clamav/*", shell=True)
         subprocess.call("freshclam", shell=True)
         subprocess.call("xs clamav enable", shell=True)
