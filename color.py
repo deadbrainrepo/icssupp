@@ -126,7 +126,8 @@ while True:
         subprocess.call("rm -rf /var/db/clamav/*", shell=True)
         subprocess.call("freshclam", shell=True)
         subprocess.call("xs clamav enable", shell=True)
-        print("Готово, начальник!")
+        subprocess.call("clear")
+        print("ClamAV в порядке!")
     elif cypher == "4":
         print("----------------------------------")
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
