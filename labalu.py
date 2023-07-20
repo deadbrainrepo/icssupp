@@ -9,4 +9,7 @@ while cypher != 0:
 
     if cypher == "1":
         subprocess.call("/usr/local/ics/support/bin/status")
-    else: print("Иди нахуй")
+    if cypher == "2":
+        print("Иди нахуй")
+    if cypher == "3":
+        subprocess.call("/usr/local/ics/backup/bin/rebuild")
