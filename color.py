@@ -54,7 +54,7 @@ def print_pepe_ascii_art_end():
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠃⠹⠗⠀⠀⠀⠀⠀⠀⠀⠀⠙⠓⠀⠀⠾⠃⠀⠀⠸⠋⠀⠀⠀⠀⠿"""
     print(pepe_ascii)
 def print_test():
-    test = "Хуй ворогам, хуй миногам"
+    test = "Хуй ворогам, хуй  ⠶⠛⠉"
     return test
 def print_pepe_ascii_art_start():
     pepe_ascii2 = """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
