@@ -39,7 +39,8 @@ print("Здравствуйте!")
 print("Вас приветствует диагностическая утилита ICSSUPP.")
 print("Чем могу помочь?")
 while cypher != 0:
-    print("1) Проверить состояние служб\n2) Послать нахуй\n3) Сделать ребилд\n4) Починить ClamAV\n5) Проверить стейты" )
+    print("1) Проверить состояние служб\n2) Послать нахуй\n3) Сделать ребилд\n4) Починить ClamAV\n5) Проверить "
+          "стейты\n6)Продлить тестовый период" )
     cypher = input()
 
     if cypher == "1":
@@ -56,7 +57,6 @@ while cypher != 0:
         subprocess.call("freshclam", shell=True)
         subprocess.call("xs clamav enable", shell=True)
     if cypher == "5":
-        subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head")
+        subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
     if cypher == "6":
-            subprocess.call("pwd")
-            subprocess.call("whoami")
+        subprocess.call("sh -c 'BASE_PARTITION="'$(zfs list -d 0 -H | cut -f 1 | grep zp)'" && zfs set zfs:trial=839 $BASE_PARTITION@ok' && xs execworker restart && xs jojoba restart", shell=True)
