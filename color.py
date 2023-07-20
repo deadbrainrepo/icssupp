@@ -83,6 +83,8 @@ def print_pepe_ascii_art_start():
 bye = 'Бывай, начальник!\n'
 run = 'run...\n'
 hi = '----------------------------------\nЗдравствуйте!\nВас приветствует диагностическая утилита ICSSUPP.\nЧем могу помочь?\n----------------------------------'
+pepe_h = print_pepe_ascii_art_start()
+green(pepe_h)
 green("yap")
 subprocess.call("clear")
 for i in run:
