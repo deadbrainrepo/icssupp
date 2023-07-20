@@ -130,6 +130,7 @@ while True:
         subprocess.call("clear")
         print("ClamAV в порядке!")
     elif cypher == "4":
+        subprocess.call("clear")
         print("Стейты\n----------------------------------")
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
         print("----------------------------------")
