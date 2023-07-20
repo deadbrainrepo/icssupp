@@ -141,6 +141,7 @@ while True:
         subprocess.call("clear")
         print("Тестовый период успешно продлён.")
     elif cypher == "6":
+        subprocess.call("clear")
         print("----------------------------------")
         print(get_random_joke())
         print("----------------------------------")
