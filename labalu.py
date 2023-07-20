@@ -40,13 +40,13 @@ print("Вас приветствует диагностическая утили
 print("Чем могу помочь?")
 while cypher != 0:
     print("1) Проверить состояние служб\n2) Послать нахуй\n3) Сделать ребилд\n4) Починить ClamAV\n5) Проверить "
-          "стейты\n6)Продлить тестовый период" )
+          "стейты\n6) Продлить тестовый период" )
     cypher = input()
 
     if cypher == "1":
         subprocess.call("/usr/local/ics/support/bin/status")
     if cypher == "2":
-        print("Иди нахуй")
+        print("Иди нахуй, другалёк")
         print_pepe_ascii_art()
         cypher = 0
     if cypher == "3":
@@ -57,6 +57,8 @@ while cypher != 0:
         subprocess.call("freshclam", shell=True)
         subprocess.call("xs clamav enable", shell=True)
     if cypher == "5":
+        print("----------------------------------")
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
+        print("----------------------------------")
     if cypher == "6":
         subprocess.call("sh -c 'BASE_PARTITION="'$(zfs list -d 0 -H | cut -f 1 | grep zp)'" && zfs set zfs:trial=839 $BASE_PARTITION@ok' && xs execworker restart && xs jojoba restart", shell=True)
