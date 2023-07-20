@@ -88,7 +88,7 @@ hi = '----------------------------------\nЗдравствуйте!\nВас пр
 green("yap")
 subprocess.call("clear")
 for i in pepe_ascii2:
-    time.sleep(0.005)
+    time.sleep(0.001)
     print(i, end='', flush=True)
 subprocess.call("clear")
 #subprocess.call("clear")
