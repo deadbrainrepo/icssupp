@@ -92,7 +92,10 @@ green("yap")
 subprocess.call("clear")
 print(pepe_h)
 b = print_test()
-print(b)
+for i in b:
+    time.sleep(0.2)
+    print(i, end='', flush=True)
+subprocess.call("clear")
 print_pepe_ascii_art_start
 #subprocess.call("clear")
 #print_pepe_ascii_art_start()
