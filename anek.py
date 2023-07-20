@@ -1,6 +1,8 @@
 import subprocess
 import requests
 
+def green(text):
+    print("\033[34m{}".format(text))
 def get_random_joke():
     url = 'https://v2.jokeapi.dev/joke/Any'
     response = requests.get(url)
@@ -13,7 +15,7 @@ def get_random_joke():
             joke = f"{joke_data['setup']} {joke_data['delivery']}"
         return joke
     else:
-        return "Failed to fetch joke. Please try again later."
+        return "Обойдёшься без шутки."
 
 def print_pepe_ascii_art():
     pepe_ascii = """⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -65,14 +67,15 @@ while True:
     cypher = input()
 
     if cypher == "0":
-        print("Иди нахуй, другалёк")
-        print_pepe_ascii_art()
+        print("Иди нахуй, начальник")
+        green(print_pepe_ascii_art())
         break
     elif cypher == "1":
         subprocess.call("/usr/local/ics/support/bin/status")
 
     elif cypher == "2":
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
+        print("Готово, начальник!")
     elif cypher == "3":
         subprocess.call("xs clamav disable", shell=True)
         subprocess.call("rm -rf /var/db/clamav/*", shell=True)
@@ -92,7 +95,7 @@ while True:
     elif cypher == "7":
         subprocess.call("passwd root && echo R! >> /etc/motd.template", shell=True)
         subprocess.call("service motd restart", shell=True)
-        print("Готово!")
+        print("Готово, начальник!")
     else:
         print("----------------------------------")
         print("Нет такой буквы")
