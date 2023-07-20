@@ -80,7 +80,7 @@ def print_pepe_ascii_art_start():
 ⢱⡿⠶⠿⠶⠾⠶⠾⠶⠾⠷⠾⠶⠾⠷⠾⠶⠾⠷⠾⠷⠾⠷⠾⠷⠾⠟⠛⠻⠞⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢹"""
     print(pepe_ascii2)
 
-bye = 'Бывай, начальник!'
+bye = 'Бывай, начальник!\n'
 
 green("run...")
 print_pepe_ascii_art_start()
