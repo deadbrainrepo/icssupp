@@ -88,7 +88,7 @@ pepe_q = pepe_h
 green("yap")
 subprocess.call("clear")
 print(pepe_h)
-print(print_pepe_ascii_art_start)
+print_pepe_ascii_art_start
 #subprocess.call("clear")
 #print_pepe_ascii_art_start()
 for i in run:
