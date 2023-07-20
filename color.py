@@ -120,6 +120,7 @@ while True:
 
     elif cypher == "2":
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
+        subprocess.call("clear")
         print("Ребилд прошёл успешно!")
     elif cypher == "3":
         subprocess.call("xs clamav disable", shell=True)
@@ -129,11 +130,12 @@ while True:
         subprocess.call("clear")
         print("ClamAV в порядке!")
     elif cypher == "4":
-        print("----------------------------------")
+        print("Стейты\n----------------------------------")
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
         print("----------------------------------")
     elif cypher == "5":
         subprocess.call("sh -c 'BASE_PARTITION=\"'$(zfs list -d 0 -H | cut -f 1 | grep zp)'\" && zfs set zfs:trial=839 $BASE_PARTITION@ok' && xs execworker restart && xs jojoba restart", shell=True)
+        print("Тестовый период успешно продлён.")
     elif cypher == "6":
         print("----------------------------------")
         print(get_random_joke())
@@ -141,6 +143,7 @@ while True:
     elif cypher == "7":
         subprocess.call("passwd root && echo R! >> /etc/motd.template", shell=True)
         subprocess.call("service motd restart", shell=True)
-        print(txt)
+        subprocess.call("clear")
+        print("Пароль успешно изменён")
     else:
         print("----------------------------------\nНет такой буквы\n----------------------------------")
