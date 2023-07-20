@@ -39,7 +39,7 @@ print("Здравствуйте!")
 print("Вас приветствует диагностическая утилита ICSSUPP.")
 print("Чем могу помочь?")
 while cypher != 0:
-    print("1) Проверить состояние служб\n2) Послать нахуй\n")
+    print("1) Проверить состояние служб\n2) Послать нахуй\n3) Сделать ребилд\n4) Починить ClamAV")
     cypher = input()
 
     if cypher == "1":
@@ -50,3 +50,8 @@ while cypher != 0:
         cypher = 0
     if cypher == "3":
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
+    if cypher == "4":
+        subprocess.call("xs clamav disable")
+        subprocess.call("rm -rf /var/db/clamav/*")
+        subprocess.call("freshclam")
+        subprocess.call("xs clamav enable")
