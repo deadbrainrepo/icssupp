@@ -96,7 +96,7 @@ while True:
 
     if cypher == "0":
         print("Бывай, начальник")
-        green(print_pepe_ascii_art_end())
+        print_pepe_ascii_art_end()
         break
     elif cypher == "1":
         subprocess.call("/usr/local/ics/support/bin/status")
