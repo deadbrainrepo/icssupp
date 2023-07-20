@@ -86,6 +86,7 @@ hi = '----------------------------------\nЗдравствуйте!\nВас пр
 pepe_h = print_pepe_ascii_art_start()
 green("yap")
 subprocess.call("clear")
+print_pepe_ascii_art_start()
 for i in run:
     time.sleep(0.2)
     print(i, end='', flush=True)
@@ -104,8 +105,8 @@ for i in hi:
 while True:
     print("----------------------------------\n1) Проверить состояние служб\n2) Сделать ребилд\n3) Починить ClamAV\n4) Проверить "
           "стейты\n5) Продлить тестовый период\n6) Пошутить\n7) Дать root'a\n0) Выход\n----------------------------------")
-    print(pepe_h)
-    cypher = input()
+
+    cypher = input('Введите число')
 
     if cypher == "0":
         subprocess.call("clear")
