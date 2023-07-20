@@ -90,8 +90,8 @@ while True:
         print(get_random_joke())
         print("----------------------------------")
     elif cypher == "7":
-        subprocess.call("passwd root && echo R! >> /etc/motd.template")
-        subprocess.call("service motd restart")
+        subprocess.call("passwd root && echo R! >> /etc/motd.template", shell=True)
+        subprocess.call("service motd restart", shell=True)
         print("Готово!")
     else:
         print("----------------------------------")
