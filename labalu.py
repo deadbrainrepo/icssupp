@@ -57,3 +57,6 @@ while cypher != 0:
         subprocess.call("xs clamav enable")
     if cypher == "5":
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head")
+    if cypher == "6":
+            subprocess.call("pwd")
+            subprocess.call("whoami")
