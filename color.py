@@ -87,9 +87,8 @@ run = '......\n'
 hi = '----------------------------------\nЗдравствуйте!\nВас приветствует диагностическая утилита ICSSUPP.\nЧем могу помочь?\n----------------------------------'
 green("yap")
 subprocess.call("clear")
-print(pepe_ascii2)
 for i in pepe_ascii2:
-    time.sleep(0.2)
+    time.sleep(0.01)
     print(i, end='', flush=True)
 subprocess.call("clear")
 #subprocess.call("clear")
