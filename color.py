@@ -81,7 +81,7 @@ def print_pepe_ascii_art_start():
     print(pepe_ascii2)
 
 txt = 'Готово, командир!'
-    for i in txt:  # этот цикл будет брать по 1 буковке из тхт
+    for i in txt:
         time.sleep(0.3)
         print(i, end='', flush=True)
 green("run...")
