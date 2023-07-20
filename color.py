@@ -78,7 +78,7 @@ def print_pepe_ascii_art_start():
 ⠿⣿⣿⠾⠿⣿⡿⣵⣿⡏⣿⠹⣿⣞⢷⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣴⠟⡾⣿⣹⣿⣿⢷⡽⣏⠛⠓⠒⠛⠛⠛⠛⠛
 ⡼⢭⠥⣴⠬⣿⠿⢯⡿⢥⡿⢧⡿⢿⡿⢯⠭⢭⡿⢿⡿⢿⡿⢶⡶⢶⡾⢾⡿⢿⡭⢿⣿⠼⣧⠍⣭⠭⣥⠬⣷⢻⣆⣀⣦⣀⣴⣀⣀⠀
 ⢱⡿⠶⠿⠶⠾⠶⠾⠶⠾⠷⠾⠶⠾⠷⠾⠶⠾⠷⠾⠷⠾⠷⠾⠷⠾⠟⠛⠻⠞⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢹"""
-    return print(pepe_ascii2)
+    return pepe_ascii2
 
 bye = 'Бывай, начальник!\n'
 run = '......\n'
@@ -86,7 +86,7 @@ hi = '----------------------------------\nЗдравствуйте!\nВас пр
 pepe_h = print_pepe_ascii_art_start()
 green("yap")
 subprocess.call("clear")
-print_pepe_ascii_art_start()
+#print_pepe_ascii_art_start()
 for i in run:
     time.sleep(0.2)
     print(i, end='', flush=True)
