@@ -52,9 +52,9 @@ while cypher != 0:
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
     if cypher == "4":
         subprocess.call("xs clamav disable", shell=True)
-        subprocess.call("rm -rf /var/db/clamav/*")
-        subprocess.call("freshclam")
-        subprocess.call("xs clamav enable")
+        subprocess.call("rm -rf /var/db/clamav/*", shell=True)
+        subprocess.call("freshclam", shell=True)
+        subprocess.call("xs clamav enable", shell=True)
     if cypher == "5":
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head")
     if cypher == "6":
