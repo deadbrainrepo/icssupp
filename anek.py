@@ -2,7 +2,7 @@ import subprocess
 import requests
 
 def green(text):
-    print("\033[34m{}".format(text))
+    print("\033[32m{}".format(text))
 def get_random_joke():
     url = 'https://v2.jokeapi.dev/joke/Any'
     response = requests.get(url)
