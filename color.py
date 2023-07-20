@@ -91,15 +91,10 @@ for i in pepe_ascii2:
     time.sleep(0.001)
     print(i, end='', flush=True)
 subprocess.call("clear")
-#subprocess.call("clear")
-#print_pepe_ascii_art_start()
+
 for i in run:
     time.sleep(0.2)
     print(i, end='', flush=True)
-subprocess.call("clear")
-
-print(pepe_q)
-
 subprocess.call("clear")
 
 for i in hi:
