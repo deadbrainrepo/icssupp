@@ -33,6 +33,7 @@ def print_pepe_ascii_art():
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠙⠿⣧⡀⠀⠀⠀⣴⠏⠀⠀⠀⢀⣴⠆⠀⢀⠀⠻⣆⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣇⠀⠀⠀⠀⠀⠈⠻⣦⣤⣼⠃⠀⠀⢀⣠⠞⠁⠀⣠⡾⠀⠀⠻⡆
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠃⠹⠗⠀⠀⠀⠀⠀⠀⠀⠀⠙⠓⠀⠀⠾⠃⠀⠀⠸⠋⠀⠀⠀⠀⠿"""
+    print (pepe_ascii)
 cypher = (1)
 print("Здравствуйте!")
 print("Вас приветствует диагностическая утилита ICSSUPP.")
@@ -45,7 +46,7 @@ while cypher != 0:
         subprocess.call("/usr/local/ics/support/bin/status")
     if cypher == "2":
         print("Иди нахуй")
-        print (print_pepe_ascii_art())
+        print_pepe_ascii_art()
         cypher = 0
     if cypher == "3":
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
