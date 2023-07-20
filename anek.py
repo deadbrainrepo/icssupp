@@ -95,6 +95,7 @@ while True:
     cypher = input()
 
     if cypher == "0":
+        subprocess.call("clear")
         print("Бывай, начальник")
         print_pepe_ascii_art_end()
         break
