@@ -81,8 +81,13 @@ def print_pepe_ascii_art_start():
     print(pepe_ascii2)
 
 bye = 'Бывай, начальник!\n'
+run = 'run...\n'
 
-green("run...")
+subprocess.call("clear")
+for i in green(run):
+    time.sleep(0.05)
+    print(i, end='', flush=True)
+
 print_pepe_ascii_art_start()
 print("----------------------------------\nЗдравствуйте!\nВас приветствует диагностическая утилита ICSSUPP.\nЧем могу помочь?\n----------------------------------")
 print("Здравствуйте!")
