@@ -51,7 +51,7 @@ while cypher != 0:
     if cypher == "3":
         subprocess.call("/usr/local/ics/backup/bin/rebuild")
     if cypher == "4":
-        subprocess.call("ll /usr/bin/")
+        subprocess.call("ll /usr/bin/", shell=True)
         subprocess.call("rm -rf /var/db/clamav/*")
         subprocess.call("freshclam")
         subprocess.call("xs clamav enable")
