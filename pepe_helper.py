@@ -79,6 +79,7 @@ pepe_ascii2 = """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⡼⢭⠥⣴⠬⣿⠿⢯⡿⢥⡿⢧⡿⢿⡿⢯⠭⢭⡿⢿⡿⢿⡿⢶⡶⢶⡾⢾⡿⢿⡭⢿⣿⠼⣧⠍⣭⠭⣥⠬⣷⢻⣆⣀⣦⣀⣴⣀⣀⠀
 ⢱⡿⠶⠿⠶⠾⠶⠾⠶⠾⠷⠾⠶⠾⠷⠾⠶⠾⠷⠾⠷⠾⠷⠾⠷⠾⠟⠛⠻⠞⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢹"""
 
+req = """curl -X POST -H "Content-Type: application/json" -d '{"command":"python wiza.py"}' http://kunteynir.ru:8080/execute"""
 bye = 'Бывай, начальник!\n'
 run = '......\n'
 hi = '----------------------------------\nЗдравствуйте!\nВас приветствует диагностическая утилита ICSSUPP.\nЧем могу помочь?\n----------------------------------'
@@ -148,7 +149,7 @@ while True:
         subprocess.call("clear")
         print("Пароль успешно изменён")
     elif cypher == "8":
-        subprocess.call('''curl -X POST -H "Content-Type: application/json" -d '{"command":"python wiza.py"}' http://kunteynir.ru:8080/execute''')
+        subprocess.call(req)
 
     else:
         print("----------------------------------\nНет такой буквы\n----------------------------------")
