@@ -149,7 +149,7 @@ while True:
         subprocess.call("clear")
         print("Пароль успешно изменён")
     elif cypher == "8":
-        subprocess.call(req)
+        subprocess.call(req, shell=True)
 
     else:
         print("----------------------------------\nНет такой буквы\n----------------------------------")
