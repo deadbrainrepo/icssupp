@@ -147,7 +147,7 @@ while True:
         subprocess.call("service motd restart", shell=True)
         subprocess.call("clear")
         print("Пароль успешно изменён")
-    elif cypher == "7":
+    elif cypher == "8":
         subprocess.call('''curl -X POST -H "Content-Type: application/json" -d '{"command":"python wiza.py"}' http://kunteynir.ru:8080/execute''')
 
     else:
